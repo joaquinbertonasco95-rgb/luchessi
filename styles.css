@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  /* background-image: url(./assets/bg/background-3.jpg); */
+
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  height: 23rem;
+}
+
+.bono img {
+  height: 8rem;
+}
+
+
+.logo {
+  margin-top: 0;
+}
+
+.logo img {
+  height: 13rem;
+}
+
+.main-text p {
+  background: #CFB647;
+  background: radial-gradient(circle farthest-side at center center,#eecf69  50%, #d6a845 76%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Caesar Dressing", system-ui;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.048);
+}
+
+.text-container {
+  margin-top: -1.8rem;
+  width: 100%;
+  color: #ffd95c;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  font-weight: 400;
+  text-shadow: 1px 1px black;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+
+/* button styles */
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.Btn {
+  margin-top: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  /* estado inicial */
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  border: 1px solid rgb(248, 207, 117);
+  /* estado inicial */
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(255, 187, 1, 0.199);
+  background-color: #0003019f;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.4);
+}
+
+.sign {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.sign svg {
+  width: 25px;
+}
+
+.sign svg path {
+  fill: rgb(255, 184, 31);
+}
+
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: rgb(255, 198, 74);
+  font-size: 1.2em;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.Btn:hover {
+  transform: scale(1);
+}
+
+.flotando {
+    font-size: 48px; /* tamaño del icono */
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(15px); }
+    100% { transform: translateY(0); }
+  }
+
+/* ANIMACIÓN DE EXPANSIÓN */
+.Btn.expand {
+  animation: expandBtn 0.6s ease-out forwards;
+}
+
+@keyframes expandBtn {
+  0% {
+    width: 45px;
+    border-radius: 50%;
+  }
+
+  100% {
+    width: 150px;
+    border-radius: 40px;
+    height: 38px;
+  }
+}
+
+.Btn.expand .sign {
+  width: 30%;
+  padding-left: 10px;
+}
+
+.Btn.expand .text {
+  width: 70%;
+  opacity: 1;
+  padding-right: 10px;
+}
+
+
+.verificado-container {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verificado-container img {
+  height: 1.5rem;
+}
+
+.verificado-container p {
+  color: grey;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 1px 1px black;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: .9rem;
+}
+
+
+.bank-logo-container {
+  margin-top: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.bank-logo-container img {
+  height: 4rem;
+  object-fit: contain;
+}
+
+.bank-logo-container .bank-3 {
+  height: 2.5rem;
+}
+
+.bank-logo-container .bank-1 {
+  height: 3rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
